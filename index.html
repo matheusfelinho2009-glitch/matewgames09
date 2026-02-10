@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matewgames09</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="audio-player" autoplay loop muted controls style="display:none;">
+        <source src="01. Mapa1.mp3" type="audio/mpeg">
+    </audio>
+    <a href="https://www.youtube.com/@meulugarzinhosecreto" class="youtube-link" target="_blank">meu canal do youtube</a>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Bem-vindo ao meu site, me chamo matheus,tenho 16 anos.
+                aqui tu vai econtrar de tudo, minha historia, minha vida.
+                tudo esta guardado aqui. Aqui vai um resumo da minha vida:
+                sou adotado, tenho uma condição chamada austismo, por sorte tenho o nivel 1
+                por enquanto é só isso,ate mais!
+            </p>
+            <img src="elgatitolover-elgatito.gif" alt="Gatito" class="gatito">
+        </div>
+    </footer>
+    
+    <script>
+        const audio = document.getElementById('audio-player');
+        
+        // Tenta reproduzir o áudio automaticamente
+        audio.play().catch(error => {
+            console.log('Autoplay foi bloqueado, aguardando interação do usuário...');
+        });
+        
+        // Quando o usuário interage com a página, remover o mute e garantir que toca
+        document.addEventListener('click', () => {
+            audio.muted = false;
+            audio.play();
+        }, { once: true });
+        
+        document.addEventListener('touchstart', () => {
+            audio.muted = false;
+            audio.play();
+        }, { once: true });
+    </script>
+</body>
+</html>
